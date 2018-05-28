@@ -16,9 +16,10 @@ body, html {
     line-height: 1.8;
 }
 
-/* #myNavbar {
-  background-color: #ddf6ff;
-} */
+.custom_color {
+  color: black;
+  background-color: #ffe6ba;
+}
 
 .typewrite span {
   border-right: .05em solid;
@@ -57,46 +58,59 @@ body, html {
     min-height: 400px;
 }
 
+.w3-bar .w3-bar-item {
+  width: 25%;
+}
+
 .w3-wide {letter-spacing: 5px;}
 .w3-hover-opacity {cursor: pointer;}
 
 /* Turn off parallax scrolling for tablets and phones */
-/* @media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
+@media only screen and (max-device-width: 1024px) {
+    /* .bgimg-1, .bgimg-2, .bgimg-3 {
         background-attachment: scroll;
+    } */
+    .w3-xxxlarge {
+      font-size: 36px!important;
     }
-} */
+
+    #home .w3-display-middle {
+      white-space:normal!important;
+    }
+
+
+}
 </style>
 <body>
 
 <!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
+<div class="w3-top w3-large">
+  <div class="w3-bar w3-section" id="myNavbar">
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="#home" class="w3-bar-item w3-button">系學會</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> 系活動</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Project</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> 聯絡我們</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+    <a href="javascript:void(0);" onclick='smooth_scroll("#home")' class="w3-bar-item w3-button">系學會</a>
+    <a href="javascript:void(0);" onclick='smooth_scroll("#about")' class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> 系活動</a>
+    <a href="javascript:void(0);" onclick='smooth_scroll("#portfolio")' class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Project</a>
+    <a href="javascript:void(0);" onclick='smooth_scroll("#contact")' class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> 聯絡我們</a>
+    <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       <i class="fa fa-search"></i>
-    </a>
+    </a> -->
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-pale-blue w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+    <a href="javascript:void(0);" class="w3-bar-item w3-button " onclick='toggleFunction();smooth_scroll("#about")'>系活動</a>
+    <a href="javascript:void(0);" class="w3-bar-item w3-button" onclick='toggleFunction();smooth_scroll("#portfolio")'>Project</a>
+    <a href="javascript:void(0);" class="w3-bar-item w3-button" onclick='toggleFunction();smooth_scroll("#contact")'>聯絡我們</a>
+    <!-- <a href="#" class="w3-bar-item w3-button">SEARCH</a> -->
   </div>
 </div>
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-text-black w3-xxxlarge w3-wide w3-animate-opacity typewrite" data-period="2000" data-type='[ "電腦與智慧型機器人學士學位學程系學會", "幹，名字真長", "↑是系會長"]'></span>
+    <span class="w3-center w3-padding-large w3-text-black w3-xxxlarge w3-wide w3-animate-opacity typewrite" data-period="2000" data-type='[ "網站不定期施工中...", "電腦與智慧型工具人學士學位學程系學會", "幹，名子真長", "電腦與智慧型工具人保護學會", "\"為什麼 i = i+1\"", "整個B1都是我們的"]'></span>
   </div>
 </div>
 
@@ -163,7 +177,7 @@ body, html {
 
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">MY WORK</h3>
+  <h3 class="w3-center">我們做了什麼</h3>
   <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
@@ -233,9 +247,9 @@ body, html {
     </div>
     <div class="w3-col m8 w3-panel">
       <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> 二館廣闊的B1<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 暫無提供<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: cbc106013@nptu.edu.tw<br>
       </div>
       <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
       <form action="/action_page.php" target="_blank">
@@ -331,6 +345,15 @@ var TxtType = function(el, toRotate, period) {
 </script> 
 <!-- Add Google Maps -->
 <script>
+
+// $('.w3-bar .w3-bar-item ').on('click', function(e){
+//     e.preventDefault();
+//     var target= $($(this).get(0).getAttribute('href'))
+//     $('html, body').stop().animate({
+//        scrollTop: target.offset().top
+//     }, 1000);
+// });
+
 function myMap()
 {
   myCenter=new google.maps.LatLng(41.878114, -87.629798);
@@ -360,10 +383,16 @@ window.onscroll = function() {myFunction()};
 function myFunction() {
     var navbar = document.getElementById("myNavbar");
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-pale-blue";
+        navbar.className = "w3-bar" + " w3-padding-small" + " w3-card" + " w3-animate-top" + " custom_color";
     } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-pale-blue", "");
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top custom_color", "");
     }
+}
+
+// scroll into view
+function smooth_scroll(tag) {
+  window.scroll({ top: document.querySelector(tag).offsetTop, left: 0, behavior: 'smooth' });
+  // document.querySelector(tag).scrollIntoView({ behavior: 'smooth' });
 }
 
 // Used to toggle the menu on small screens when clicking on the menu button
