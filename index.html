@@ -44,13 +44,13 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url('/CIR_Site/img/president.jpg');
+    background-image: url('./img/president.jpg');
     min-height: 100%;
 }
 
 /* Second image (Portfolio) */
 .bgimg-2 {
-    background-image: url("/CIR_Site/img/meeting.jpg");
+    background-image: url("./img/meeting.jpg");
     min-height: 400px;
 }
 
@@ -118,7 +118,7 @@ body, html {
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top w3-large">
-  <div class="w3-bar w3-section" id="myNavbar">
+  <div class="li w3-bar w3-section" id="myNavbar">
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
@@ -304,7 +304,7 @@ body, html {
 </div>
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+<footer class="li w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -405,7 +405,7 @@ window.onscroll = function() {myFunction()};
 function myFunction() {
     var navbar = document.getElementById("myNavbar");
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-padding-small" + " w3-card" + " w3-animate-top" + " custom_color";
+        navbar.className = "li", " w3-bar" + " w3-padding-small" + " w3-card" + " w3-animate-top" + " custom_color";
     } else {
         navbar.className = navbar.className.replace(" w3-card w3-animate-top custom_color", "");
     }
@@ -418,33 +418,33 @@ function myFunction() {
 //     }, 1000);
 // });
 
-window.addEventListener("scroll", function() {
-  var scrollTop = document.documentElement.scrollTop;
-  if((scrollTop + 100) >= courseTop && (scrollTop + 100) < surroundingTop) {
-      $(".navbar").find(".navbar-nav li").removeClass("active");
-      $(".navbar").find(".navbar-nav .course-li").addClass("active");
-  } else if((scrollTop + 100) >= surroundingTop && (scrollTop + 100) < periodTop) {
-      $(".navbar").find(".navbar-nav li").removeClass("active");
-      $(".navbar").find(".navbar-nav .surrounding-li").addClass("active");
-  } else if((scrollTop + 100) >= periodTop && (scrollTop + 100) < mapTop) {
-      $(".navbar").find(".navbar-nav li").removeClass("active");
-      $(".navbar").find(".navbar-nav .period-li").addClass("active");
-  } else if((scrollTop + 100) >= mapTop && (scrollTop + 100) < footerTop) {
-      $(".navbar").find(".navbar-nav li").removeClass("active");
-      $(".navbar").find(".navbar-nav .map-li").addClass("active");
-  } else if((scrollTop + 100) >= footerTop) {
-      $(".navbar").find(".navbar-nav li").removeClass("active");
-      $(".navbar").find(".navbar-nav .contact-li").addClass("active");
-  }
+// window.addEventListener("scroll", function() {
+//   var scrollTop = document.documentElement.scrollTop;
+//   if((scrollTop + 100) >= courseTop && (scrollTop + 100) < surroundingTop) {
+//       $(".navbar").find(".navbar-nav li").removeClass("active");
+//       $(".navbar").find(".navbar-nav .course-li").addClass("active");
+//   } else if((scrollTop + 100) >= surroundingTop && (scrollTop + 100) < periodTop) {
+//       $(".navbar").find(".navbar-nav li").removeClass("active");
+//       $(".navbar").find(".navbar-nav .surrounding-li").addClass("active");
+//   } else if((scrollTop + 100) >= periodTop && (scrollTop + 100) < mapTop) {
+//       $(".navbar").find(".navbar-nav li").removeClass("active");
+//       $(".navbar").find(".navbar-nav .period-li").addClass("active");
+//   } else if((scrollTop + 100) >= mapTop && (scrollTop + 100) < footerTop) {
+//       $(".navbar").find(".navbar-nav li").removeClass("active");
+//       $(".navbar").find(".navbar-nav .map-li").addClass("active");
+//   } else if((scrollTop + 100) >= footerTop) {
+//       $(".navbar").find(".navbar-nav li").removeClass("active");
+//       $(".navbar").find(".navbar-nav .contact-li").addClass("active");
+//   }
 
-  if(scrollTop >= 100) {
-      $(".navbar").css("box-shadow", "0px 3px 15px rgba(150,150,150,0.3)");
-  } else {
-      $(".navbar").css("box-shadow", "0px 3px 15px rgba(150,150,150,0)");
-  }
-});
+//   if(scrollTop >= 100) {
+//       $(".navbar").css("box-shadow", "0px 3px 15px rgba(150,150,150,0.3)");
+//   } else {
+//       $(".navbar").css("box-shadow", "0px 3px 15px rgba(150,150,150,0)");
+//   }
+// });
 
-$(".w3-bar").find("a").click(function(e) {
+$(".li").find("a").click(function(e) {
   e.preventDefault();
 
   var target = this.hash;
