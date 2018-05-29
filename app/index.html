@@ -7,18 +7,19 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/basic-12/614/13_-_Question-128.png" type="image/png" sizes="16x16">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
     height: 100%;
     color: #777;
-    /* background-color: #dcf7dc; */
+    background-color: #f3f7dc;
     line-height: 1.8;
 }
 
 .custom_color {
   color: black;
-  background-color: #ffe6ba;
+  background-color: #f3f7dc;
 }
 
 .typewrite span {
@@ -80,6 +81,37 @@ body, html {
 
 
 }
+
+/* Border from Y to X  */
+#myNavbar > a:before, #myNavbar > a:after
+{
+    position: absolute;
+    opacity: 0.5;
+    height: 100%;
+    width: 2px;
+    content: '';
+    background: #FFF;
+    transition: all 0.3s;
+}
+
+#myNavbar > a:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+#myNavbar > a:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+#myNavbar > a:hover:before, #myNavbar > a:hover:after
+{
+    opacity: 1;
+    height: 2px;
+    width: 100%;
+}
 </style>
 <body>
 
@@ -89,10 +121,10 @@ body, html {
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="javascript:void(0);" onclick='smooth_scroll("#home")' class="w3-bar-item w3-button">系學會</a>
-    <a href="javascript:void(0);" onclick='smooth_scroll("#about")' class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> 系活動</a>
-    <a href="javascript:void(0);" onclick='smooth_scroll("#portfolio")' class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Project</a>
-    <a href="javascript:void(0);" onclick='smooth_scroll("#contact")' class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> 聯絡我們</a>
+    <a href="#home" class="w3-bar-item w3-button ">系學會</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> 系活動</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Project</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> 聯絡我們</a>
     <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       <i class="fa fa-search"></i>
     </a> -->
@@ -110,7 +142,7 @@ body, html {
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-text-black w3-xxxlarge w3-wide w3-animate-opacity typewrite" data-period="2000" data-type='[ "網站不定期施工中...", "電腦與智慧型工具人學士學位學程系學會", "幹，名子真長", "電腦與智慧型工具人保護學會", "\"為什麼 i = i+1\"", "整個B1都是我們的"]'></span>
+    <span class="w3-center w3-padding-large w3-text-black w3-xxxlarge w3-wide w3-animate-opacity typewrite" data-period="2000" data-type='[ "網站施工中...", "電腦與智慧型工具人學士學位學程系學會", "幹，名子真長", "\"為什麼 i = i+1\"", "整個B1都是我們的咖啡館"]'></span>
   </div>
 </div>
 
@@ -342,18 +374,7 @@ var TxtType = function(el, toRotate, period) {
         css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
         document.body.appendChild(css);
     };
-</script> 
-<!-- Add Google Maps -->
-<script>
-
-// $('.w3-bar .w3-bar-item ').on('click', function(e){
-//     e.preventDefault();
-//     var target= $($(this).get(0).getAttribute('href'))
-//     $('html, body').stop().animate({
-//        scrollTop: target.offset().top
-//     }, 1000);
-// });
-
+// <!-- Add Google Maps --
 function myMap()
 {
   myCenter=new google.maps.LatLng(41.878114, -87.629798);
@@ -388,12 +409,56 @@ function myFunction() {
         navbar.className = navbar.className.replace(" w3-card w3-animate-top custom_color", "");
     }
 }
+// $('.w3-bar .w3-bar-item ').on('click', function(e){
+//     e.preventDefault();
+//     var target= $($(this).get(0).getAttribute('href'))
+//     $('html, body').stop().animate({
+//        scrollTop: target.offset().top
+//     }, 1000);
+// });
 
-// scroll into view
-function smooth_scroll(tag) {
-  window.scroll({ top: document.querySelector(tag).offsetTop, left: 0, behavior: 'smooth' });
-  // document.querySelector(tag).scrollIntoView({ behavior: 'smooth' });
-}
+window.addEventListener("scroll", function() {
+  var scrollTop = document.documentElement.scrollTop;
+  if((scrollTop + 100) >= courseTop && (scrollTop + 100) < surroundingTop) {
+      $(".navbar").find(".navbar-nav li").removeClass("active");
+      $(".navbar").find(".navbar-nav .course-li").addClass("active");
+  } else if((scrollTop + 100) >= surroundingTop && (scrollTop + 100) < periodTop) {
+      $(".navbar").find(".navbar-nav li").removeClass("active");
+      $(".navbar").find(".navbar-nav .surrounding-li").addClass("active");
+  } else if((scrollTop + 100) >= periodTop && (scrollTop + 100) < mapTop) {
+      $(".navbar").find(".navbar-nav li").removeClass("active");
+      $(".navbar").find(".navbar-nav .period-li").addClass("active");
+  } else if((scrollTop + 100) >= mapTop && (scrollTop + 100) < footerTop) {
+      $(".navbar").find(".navbar-nav li").removeClass("active");
+      $(".navbar").find(".navbar-nav .map-li").addClass("active");
+  } else if((scrollTop + 100) >= footerTop) {
+      $(".navbar").find(".navbar-nav li").removeClass("active");
+      $(".navbar").find(".navbar-nav .contact-li").addClass("active");
+  }
+
+  if(scrollTop >= 100) {
+      $(".navbar").css("box-shadow", "0px 3px 15px rgba(150,150,150,0.3)");
+  } else {
+      $(".navbar").css("box-shadow", "0px 3px 15px rgba(150,150,150,0)");
+  }
+});
+
+$(".w3-bar").find("a").click(function(e) {
+  e.preventDefault();
+
+  var target = this.hash;
+
+  $("html, body").stop().animate({
+      scrollTop: $(target).offset().top
+  }, 900, "swing", function() {
+      window.location.hash = target;
+  });
+});
+
+// function smooth_scroll(tag) {
+//   window.scroll({ top: document.querySelector(tag).offsetTop, left: 0, behavior: 'smooth' });
+//   // document.querySelector(tag).scrollIntoView({ behavior: 'smooth' });
+// }
 
 // Used to toggle the menu on small screens when clicking on the menu button
 function toggleFunction() {
