@@ -1,5 +1,114 @@
 <!DOCTYPE html>
 <html>
+<title>智慧型工具人系學會</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    
+}
+
+.custom_color {
+  color: black;
+  background-color: #f3f7dc;
+}
+
+.typewrite span {
+  border-right: .05em solid;
+  animation: caret 1s step-end infinite;
+  
+}
+
+@keyframes caret {
+  from, to { border-color: black }
+  60% { border-color: transparent; }
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('/img/president.jpg');
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("/img/meeting.jpg");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("https://www.w3schools.com/w3images/parallax3.jpg");
+    min-height: 400px;
+}
+
+.w3-bar .w3-bar-item {
+  width: 25%;
+}
+
+.w3-wide {letter-spacing: 5px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    /* .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    } */
+    .w3-xxxlarge {
+      font-size: 36px!important;
+    }
+
+    #home .w3-display-middle {
+      white-space:normal!important;
+    }
+
+
+}
+
+/* Border from Y to X  */
+#myNavbar > a:before, #myNavbar > a:after
+{
+    position: absolute;
+    opacity: 0.5;
+    height: 100%;
+    width: 2px;
+    content: '';
+    background: #FFF;
+    transition: all 0.3s;
+}
+
+#myNavbar > a:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+#myNavbar > a:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+#myNavbar > a:hover:before, #myNavbar > a:hover:after
+{
+    opacity: 1;
+    height: 2px;
+    width: 100%;
+}
+</style>
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -358,8 +467,6 @@ function toggleFunction() {
 }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=A-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-
-<script src="fdfdfffffffffffffffffffffdddd"></script>
 <!--
 To use this code on your website, get a free API key from Google.
 Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
