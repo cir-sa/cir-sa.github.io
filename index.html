@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="icon" href="https://cdn4.iconfinder.com/data/icons/basic-12/614/13_-_Question-128.png" type="image/png" sizes="16x16">
+<link rel="icon" href="img/pigeon-icons.png" type="image/png" sizes="16x16">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;}
@@ -148,7 +148,7 @@ body, html {
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-text-black w3-xxxlarge w3-wide w3-animate-opacity typewrite" data-period="2000" data-type='[ "網站充電中..", "電腦與智慧型機器人學士學位學程系學會", "名字給你吐槽", "整個B1都是我們場地", "大學就要辦活動啊", "不然"]'></span>
+    <span class="w3-center w3-padding-large w3-text-black w3-xxxlarge w3-wide w3-animate-opacity typewrite" data-period="2000" data-type='[ "網站開發中....", "電腦與智慧型機器人學士學位學程系學會", "用名字刷出存在感", "二館B1都是系上的", "大學就要辦活動啊"]'></span>
   </div>
 </div>
 
@@ -172,7 +172,7 @@ body, html {
         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
   </div>
-  <p class="w3-large w3-center w3-padding-16">系學會非常擅長:</p>
+  <p class="w3-large w3-center w3-padding-16">系學會專業領域:</p>
   <p class="w3-wide"><i class="fa fa-camera"></i>工人智慧</p>
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
@@ -275,8 +275,8 @@ body, html {
 
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">我們在Where</h3>
-  <p class="w3-center"><em>我相信還有要補充</em></p>
+  <h3 class="w3-center">我們在哪裡</h3>
+  <p class="w3-center"><em>相信要補充</em></p>
 
   <!-- <div class="w3-content w3-padding-32"> -->
     <!-- <div class="w3-col m4 w3-container"> -->
@@ -310,7 +310,7 @@ body, html {
 
 <!-- Footer -->
 <footer class="li w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>回頂</a>
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>系學會</a>
   <div class="w3-xlarge w3-section">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -320,159 +320,159 @@ body, html {
 
 <script>
 // Add typewriter js effect  
-var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
+  var TxtType = function(el, toRotate, period) {
+          this.toRotate = toRotate;
+          this.el = el;
+          this.loopNum = 0;
+          this.period = parseInt(period, 10) || 2000;
+          this.txt = '';
+          this.tick();
+          this.isDeleting = false;
+      };
 
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
+  TxtType.prototype.tick = function() {
+      var i = this.loopNum % this.toRotate.length;
+      var fullTxt = this.toRotate[i];
 
-        if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
+      if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+      } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+      }
 
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+      this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
-        var that = this;
-        var delta = 200 - Math.random() * 100;
+      var that = this;
+      var delta = 200 - Math.random() * 100;
 
-        if (this.isDeleting) { delta /= 2; }
+      if (this.isDeleting) { delta /= 2; }
 
-        if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-        }
+      if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+      } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+      }
 
-        setTimeout(function() {
-        that.tick();
-        }, delta);
-    };
-
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-        document.body.appendChild(css);
-    };
-// <!-- Add Google Maps --
-function myMap()
-{
-  myCenter=new google.maps.LatLng(41.878114, -87.629798);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
+      setTimeout(function() {
+      that.tick();
+      }, delta);
   };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
 
-  var marker = new google.maps.Marker({
-    position: myCenter,
+  window.onload = function() {
+      var elements = document.getElementsByClassName('typewrite');
+      for (var i=0; i<elements.length; i++) {
+          var toRotate = elements[i].getAttribute('data-type');
+          var period = elements[i].getAttribute('data-period');
+          if (toRotate) {
+            new TxtType(elements[i], JSON.parse(toRotate), period);
+          }
+      }
+      // INJECT CSS
+      var css = document.createElement("style");
+      css.type = "text/css";
+      css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+      document.body.appendChild(css);
+  };
+// <!-- Add Google Maps --
+  function myMap()
+  {
+    myCenter=new google.maps.LatLng(41.878114, -87.629798);
+    var mapOptions= {
+      center:myCenter,
+      zoom:12, scrollwheel: false, draggable: false,
+      mapTypeId:google.maps.MapTypeId.ROADMAP
+    };
+    var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+    var marker = new google.maps.Marker({
+      position: myCenter,
+    });
+    marker.setMap(map);
+  }
+
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
+
+  // Change style of navbar on scroll
+  window.onscroll = function() {myFunction()};
+  function myFunction() {
+      var navbar = document.getElementById("myNavbar");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          navbar.className = "li" + " w3-text-black" + " w3-bar" + " w3-padding-small" + " w3-card" + " w3-animate-top" + " custom_color";
+      } else {
+          navbar.className = navbar.className.replace(" w3-card w3-animate-top custom_color", "");
+      }
+  }
+  // $('.w3-bar .w3-bar-item ').on('click', function(e){
+  //     e.preventDefault();
+  //     var target= $($(this).get(0).getAttribute('href'))
+  //     $('html, body').stop().animate({
+  //        scrollTop: target.offset().top
+  //     }, 1000);
+  // });
+
+  // window.addEventListener("scroll", function() {
+  //   var scrollTop = document.documentElement.scrollTop;
+  //   if((scrollTop + 100) >= courseTop && (scrollTop + 100) < surroundingTop) {
+  //       $(".navbar").find(".navbar-nav li").removeClass("active");
+  //       $(".navbar").find(".navbar-nav .course-li").addClass("active");
+  //   } else if((scrollTop + 100) >= surroundingTop && (scrollTop + 100) < periodTop) {
+  //       $(".navbar").find(".navbar-nav li").removeClass("active");
+  //       $(".navbar").find(".navbar-nav .surrounding-li").addClass("active");
+  //   } else if((scrollTop + 100) >= periodTop && (scrollTop + 100) < mapTop) {
+  //       $(".navbar").find(".navbar-nav li").removeClass("active");
+  //       $(".navbar").find(".navbar-nav .period-li").addClass("active");
+  //   } else if((scrollTop + 100) >= mapTop && (scrollTop + 100) < footerTop) {
+  //       $(".navbar").find(".navbar-nav li").removeClass("active");
+  //       $(".navbar").find(".navbar-nav .map-li").addClass("active");
+  //   } else if((scrollTop + 100) >= footerTop) {
+  //       $(".navbar").find(".navbar-nav li").removeClass("active");
+  //       $(".navbar").find(".navbar-nav .contact-li").addClass("active");
+  //   }
+
+  //   if(scrollTop >= 100) {
+  //       $(".navbar").css("box-shadow", "0px 3px 15px rgba(150,150,150,0.3)");
+  //   } else {
+  //       $(".navbar").css("box-shadow", "0px 3px 15px rgba(150,150,150,0)");
+  //   }
+  // });
+
+  $(".li").find("a").click(function(e) {
+    e.preventDefault();
+
+    var target = this.hash;
+
+    $("html, body").stop().animate({
+        scrollTop: $(target).offset().top
+    }, 900, "swing", function() {
+        window.location.hash = target;
+    });
   });
-  marker.setMap(map);
-}
 
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+  // function smooth_scroll(tag) {
+  //   window.scroll({ top: document.querySelector(tag).offsetTop, left: 0, behavior: 'smooth' });
+  //   // document.querySelector(tag).scrollIntoView({ behavior: 'smooth' });
+  // }
 
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "li" + " w3-text-black" + " w3-bar" + " w3-padding-small" + " w3-card" + " w3-animate-top" + " custom_color";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top custom_color", "");
-    }
-}
-// $('.w3-bar .w3-bar-item ').on('click', function(e){
-//     e.preventDefault();
-//     var target= $($(this).get(0).getAttribute('href'))
-//     $('html, body').stop().animate({
-//        scrollTop: target.offset().top
-//     }, 1000);
-// });
-
-// window.addEventListener("scroll", function() {
-//   var scrollTop = document.documentElement.scrollTop;
-//   if((scrollTop + 100) >= courseTop && (scrollTop + 100) < surroundingTop) {
-//       $(".navbar").find(".navbar-nav li").removeClass("active");
-//       $(".navbar").find(".navbar-nav .course-li").addClass("active");
-//   } else if((scrollTop + 100) >= surroundingTop && (scrollTop + 100) < periodTop) {
-//       $(".navbar").find(".navbar-nav li").removeClass("active");
-//       $(".navbar").find(".navbar-nav .surrounding-li").addClass("active");
-//   } else if((scrollTop + 100) >= periodTop && (scrollTop + 100) < mapTop) {
-//       $(".navbar").find(".navbar-nav li").removeClass("active");
-//       $(".navbar").find(".navbar-nav .period-li").addClass("active");
-//   } else if((scrollTop + 100) >= mapTop && (scrollTop + 100) < footerTop) {
-//       $(".navbar").find(".navbar-nav li").removeClass("active");
-//       $(".navbar").find(".navbar-nav .map-li").addClass("active");
-//   } else if((scrollTop + 100) >= footerTop) {
-//       $(".navbar").find(".navbar-nav li").removeClass("active");
-//       $(".navbar").find(".navbar-nav .contact-li").addClass("active");
-//   }
-
-//   if(scrollTop >= 100) {
-//       $(".navbar").css("box-shadow", "0px 3px 15px rgba(150,150,150,0.3)");
-//   } else {
-//       $(".navbar").css("box-shadow", "0px 3px 15px rgba(150,150,150,0)");
-//   }
-// });
-
-$(".li").find("a").click(function(e) {
-  e.preventDefault();
-
-  var target = this.hash;
-
-  $("html, body").stop().animate({
-      scrollTop: $(target).offset().top
-  }, 900, "swing", function() {
-      window.location.hash = target;
-  });
-});
-
-// function smooth_scroll(tag) {
-//   window.scroll({ top: document.querySelector(tag).offsetTop, left: 0, behavior: 'smooth' });
-//   // document.querySelector(tag).scrollIntoView({ behavior: 'smooth' });
-// }
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function toggleFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+      } else {
+          x.className = x.className.replace(" w3-show", "");
+      }
+  }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
 <!--
 To use this code on your website, get a free API key from Google.
 Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
