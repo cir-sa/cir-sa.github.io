@@ -1,4 +1,4 @@
-# 國立屏東大學 電腦與智慧型機器人學士學位學程 學會官網
+# 國立屏東大學 電腦與智慧型機器人學士學位學程學會官網
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/cir-sa/cir-sa.github.io/graphs/commit-activity) 
 [![Join the chat at https://gitter.im/cir-sa/CIRTC-2018](https://badges.gitter.im/cir-sa/CIRTC-2018.svg)](https://gitter.im/cir-sa/Lobby)
 
