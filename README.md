@@ -6,3 +6,5 @@
 * 發PUSH時commit訊息使用中文確保溝通無礙
 * 開發時有疑問可戳chat on gitter徽章提問
 * 有重大無解bug請開Issue討論
+* 請將css、js、php等分別獨立成單一檔案，並放至相對應資料夾下。
+
