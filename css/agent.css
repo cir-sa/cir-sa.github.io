@@ -11,7 +11,7 @@ h6 {
 body,
 html {
     height: 100%;
-    color: #777;
+    /* color: #777; */
     background-color: #ffffff;
     line-height: 1.8;
     font-size: 20px;
@@ -23,10 +23,12 @@ html {
 }
 
 @keyframes caret {
+
     from,
     to {
         border-color: black
     }
+
     60% {
         border-color: transparent;
     }
@@ -35,8 +37,8 @@ html {
 /* Create a Parallax Effect */
 
 .section1,
-.bgimg-2,
-.bgimg-3 {
+.section3,
+.section5 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,28 +48,45 @@ html {
 /* First image (Logo. Full height) */
 
 .section1 {
-    background-image: /* top, transparent red */
-    linear-gradient( rgba(161, 161, 161, 0.4), rgba(161, 161, 161, 0.4)),
-    url(https://images.pexels.com/photos/518389/pexels-photo-518389.jpeg);
-}
-/* Second image (Portfolio) */
-
-.bgimg-2 {
-    background-image: url("./img/meeting.jpg");
-    min-height: 400px;
+    color: #042c1e;
+    background-image:
+        /* top, transparent red */
+        linear-gradient(rgba(161, 161, 161, 0.4), rgba(161, 161, 161, 0.4)),
+        url(https://images.pexels.com/photos/518389/pexels-photo-518389.jpeg);
 }
 
-/* Third image (Contact) */
+.section2 {
+    color: rgba(33, 33, 33, .9);
+    /* background-color: #ffd42d */
+}
 
-.bgimg-3 {
-    background-image: url("https://images.pexels.com/photos/681794/pexels-photo-681794.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-    min-height: 400px;
+.section3 {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)),
+        url("/img/meeting.jpg");
+}
+
+.section4 {
+    /* color: #ffffff; */
+    /* background-color: #214fc6; */
+}
+
+.section5 {
+    background-image: url("https://images.pexels.com/photos/674268/pexels-photo-674268.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1920&h=1280");
 }
 
 .row {
     height: 100%;
 }
 
-.section2 {
-    background-color: rgb(236, 254, 255)
+.card {
+    width: 300px;
 }
+
+.card-title {
+    margin-top: 1rem;
+}
+
+/* Color asset
+    #ffd42d
+     */
