@@ -72,7 +72,13 @@ html {
 }
 
 .section5 {
-    background-image: url("https://images.pexels.com/photos/674268/pexels-photo-674268.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1920&h=1280");
+    color: sandybrown;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.3),rgba(255, 255, 255, 0.3)),
+        url("https://images.pexels.com/photos/674268/pexels-photo-674268.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1920&h=1280");
+}
+.section6 {
+    background-color: wheat ;
 }
 
 .row {
@@ -85,6 +91,59 @@ html {
 
 .card-title {
     margin-top: 1rem;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+.swap {
+	position:fixed;
+	right:20px;
+	top: 50%;
+  transform: translateY(-50%);
+
+    font-size: 28px; 
+    line-height: 14px;
+	z-index: 10;
+}
+.swap a {
+	display:block;
+	height:20px;
+	margin-bottom:5px;
+	color:white;
+	position:relative;
+	padding:4px;
+}
+.swap a.active:after {
+	box-shadow:inset 0 0 0 5px;
+}
+.swap a .hover-text {
+    box-sizing: content-box;
+	position:absolute;
+	right:15px;
+	opacity:0;
+	-webkit-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
+	padding-right: 15px;
+}
+.swap a:hover .hover-text {
+	opacity: 1;
+}
+.swap a:after {
+	-webkit-transition:box-shadow 0.5s ease;
+	transition:box-shadow 0.5s ease;
+	width:10px;
+	height:10px;
+	display: block;
+	border:1px solid;
+	border-radius:50%;
+	content:'';
+	position: absolute;
+	margin:auto;
+	top:0;
+	right:4px;
+	bottom:0;
 }
 
 /* Color asset
