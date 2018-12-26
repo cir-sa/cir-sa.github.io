@@ -50,11 +50,11 @@ html {
 /* First image (Logo. Full height) */
 
 .section1 {
-    /* color: rgb(116, 73, 158); */
+    color: white;
     background-image:
         /* top, transparent red */
-        linear-gradient(rgba(161, 161, 161, 0.1), rgba(161, 161, 161, 0.1)),
-        url(https://images.pexels.com/photos/1120162/pexels-photo-1120162.jpeg?auto=compress&cs=tinysrgb&w=1920);
+        linear-gradient(rgba(231, 231, 231, 0.2), rgba(231, 231, 231, 0.2)),
+        url("/img/exchange_gift.jpg");
 }
 
 .section2 {

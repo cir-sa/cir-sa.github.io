@@ -195,7 +195,7 @@ window.onload = function () {
             panels[i].children().animateCss(effectIn);
         },
         after: function (i, panels) {
-            panels[i].find("button").animateCss("shake");
+            panels[i].find("button").animateCss("swing");
         },
         afterRender: function () {
             var swap = "<ul class=\"swap\">";
