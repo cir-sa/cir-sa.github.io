@@ -28,12 +28,16 @@ html {
 
     from,
     to {
-        border-color: tan
+        border-color: rgb(0, 0, 0)
     }
 
     60% {
         border-color: transparent;
     }
+}
+
+.delay-custom {
+    animation-delay: 0.3s;
 }
 
 /* Create a Parallax Effect */
@@ -52,7 +56,6 @@ html {
 .section1 {
     color: white;
     background-image:
-        /* top, transparent red */
         linear-gradient(rgba(231, 231, 231, 0.2), rgba(231, 231, 231, 0.2)),
         url("/img/exchange_gift.jpg");
 }
@@ -83,6 +86,14 @@ html {
 .section6 {
     background-color: wheat;
 }
+
+.video_bg {position: absolute; top: 0; left: 0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    height: 100%;}
 
 .row {
     text-align: center;
@@ -157,6 +168,10 @@ ul {
     bottom: 0;
 }
 
+.after_swing {
+    display: inline-block;
+}
+
 .cir_avatar {
     border-radius: 50%;
     height: 15vh;
@@ -181,7 +196,3 @@ ul {
 .flex-container .cir_avatar {
     border-color: gold;
 }
-
-/* Color asset
-    #ffd42d
-     */

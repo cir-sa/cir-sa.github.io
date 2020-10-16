@@ -9,13 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
     <link rel="stylesheet" href="css/agent.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&amp;subset=chinese-traditional" rel="stylesheet">
-    <title>國立屏東大學智慧機器人學系系學會</title>
+    <title>國立屏東大學 智慧機器人系學會</title>
     <meta name="theme-color" content="#ffffff">
 </head>
 
@@ -23,34 +23,45 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 
     <script src="https://unpkg.com/jquery-scrollify@1.0.19/jquery.scrollify.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript" charset="utf-8" src="js/tubular.js"></script>
     <script src="js/agent.js"></script>
-    
+
     <div class="container-fluid h-100">
         <div class="row section1" data-section-name="首頁">
-            <div class="col my-auto">
-                <h1 class="typewrite" data-period="2000" data-type='["網站開發中....", "歡迎蒞臨 國立屏東大學智慧機器人學系 系學會", "用名字刷出存在感", "二館B1都是系上的", "大學就要辦活動啊"]'></h1>
+            <div id="tubular-container" style="overflow: hidden; position: relative; width: 100%; height: 100%">
+                <div id="tubular-player" style="position: absolute"></div>
+                <div class="col my-auto video_bg">
+                    <!-- <h1 class="typewrite" data-period="1000"
+                        data-type='["屏大機器人，Project都很神", "下課經過這，不要不留神", "欸，二館廣場都是系上der", "蛤？大學就要辦活動ㄚ"]'></h1> -->
+                </div>
             </div>
+            <!-- <div id="tubular-shield"
+                style="width: 100%; height: 100%; z-index: 1; position: relative; left: 0; top: 0;"></div> -->
         </div>
         <div class="row section2 bg-warning" data-section-name="行事曆">
             <div class="col my-auto">
-                <h1>跟單身拉不拉多辦活動</h1>
-                <button type="button" class="btn btn-primary btn-lg mt-5">請戳我🐶</button>
+                <h1>活動辦啊，哪次不辦的<span class="after_swing">🥂</span></span></h1>
+                <button type="button" class="btn btn-primary btn-lg mt-5"><span
+                        class="after_swing">來喬啊👋</span></button>
             </div>
         </div>
         <div class="row section3 text-dark" data-section-name="公開資訊">
             <div class="col my-auto">
-                <h1>組織章程</h1>
+                <h1>大學生有的是時間</h1>
             </div>
         </div>
         <div class="row section4 bg-info" data-section-name="組織成員">
             <div class="col my-auto">
-                <h1 class="text-white pb-3">我們有哪些人</h1>
+                <h1 class="text-white pb-3">我們是誰？</h1>
                 <div class="leader">
                     <img class="cir_avatar" src="img/avatar/2.jpg" alt="Card image">
                     <img class="cir_avatar" src="img/avatar/13.jpg" alt="Card image">
@@ -86,10 +97,6 @@
         </div>
     </div>
 
-
-
-
-    
 </body>
 
 </html>
